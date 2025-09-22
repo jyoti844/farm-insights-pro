@@ -44,7 +44,7 @@ const Navbar = () => {
             <span className="text-primary-foreground font-bold text-lg">🌱</span>
           </div>
           <div>
-            <h1 className="text-lg font-bold text-primary">FarmTech Pro</h1>
+            <h1 className="text-lg font-bold text-primary">KrishiSetu</h1>
             <p className="text-xs text-muted-foreground">Smart Agriculture Platform</p>
           </div>
         </div>

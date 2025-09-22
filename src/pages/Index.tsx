@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar';
 import HeroSlider from '@/components/HeroSlider';
 import FeatureCards from '@/components/FeatureCards';
+import InspirationalQuotes from '@/components/InspirationalQuotes';
 import Feedback from '@/components/Feedback';
 import ChatBot from '@/components/ChatBot';
 
@@ -11,6 +12,7 @@ const Index = () => {
       <main>
         <HeroSlider />
         <FeatureCards />
+        <InspirationalQuotes />
         <Feedback />
       </main>
       <ChatBot />
