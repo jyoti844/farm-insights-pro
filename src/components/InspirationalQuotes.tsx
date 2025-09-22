@@ -37,37 +37,37 @@ const InspirationalQuotes = () => {
   }, []);
 
   return (
-    <section className="py-20 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5">
-      <div className="container">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+    <section className="py-12 md:py-16 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5 relative">
+      <div className="container px-4">
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">
             Inspired By
           </h2>
-          <div className="w-24 h-1 bg-gradient-primary mx-auto rounded-full"></div>
+          <div className="w-16 md:w-24 h-1 bg-gradient-primary mx-auto rounded-full"></div>
         </div>
         
-        <Card className="max-w-4xl mx-auto shadow-large border-primary/20 bg-background/80 backdrop-blur-sm">
-          <CardContent className="p-8 md:p-12">
-            <div className="flex flex-col md:flex-row items-center gap-8">
+        <Card className="max-w-5xl mx-auto shadow-large border-primary/20 bg-background/80 backdrop-blur-sm">
+          <CardContent className="p-6 md:p-8 lg:p-12">
+            <div className="flex flex-col lg:flex-row items-center gap-6 md:gap-8">
               {/* Image Section */}
               <div className="flex-shrink-0">
                 <div className="relative">
-                  <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-gradient-primary shadow-glow">
+                  <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden border-4 border-gradient-primary shadow-glow">
                     <img
                       src={atalImage}
-                      alt="Atal Bihari Vajpayee"
+                      alt="Atal Bihari Vajpayee - Former Prime Minister of India"
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-medium">
-                    <Quote className="h-6 w-6 text-white" />
+                  <div className="absolute -top-2 -right-2 w-10 h-10 md:w-12 md:h-12 bg-primary rounded-full flex items-center justify-center shadow-medium">
+                    <Quote className="h-4 w-4 md:h-6 md:w-6 text-white" />
                   </div>
                 </div>
               </div>
               
               {/* Quote Section */}
-              <div className="flex-1 text-center md:text-left">
-                <div className="relative min-h-[120px] flex items-center">
+              <div className="flex-1 text-center lg:text-left">
+                <div className="relative min-h-[100px] md:min-h-[120px] flex items-center">
                   {quotes.map((quote, index) => (
                     <div
                       key={index}
@@ -77,10 +77,10 @@ const InspirationalQuotes = () => {
                           : 'opacity-0 transform translate-y-4'
                       }`}
                     >
-                      <blockquote className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6 italic">
+                      <blockquote className="text-base md:text-lg lg:text-xl text-muted-foreground leading-relaxed mb-4 md:mb-6 italic px-2">
                         "{quote.text}"
                       </blockquote>
-                      <cite className="text-primary font-semibold text-lg">
+                      <cite className="text-primary font-semibold text-sm md:text-base lg:text-lg">
                         — {quote.author}
                       </cite>
                     </div>
@@ -88,13 +88,13 @@ const InspirationalQuotes = () => {
                 </div>
                 
                 {/* Quote Indicators */}
-                <div className="flex justify-center md:justify-start gap-2 mt-8">
+                <div className="flex justify-center lg:justify-start gap-2 mt-6 md:mt-8">
                   {quotes.map((_, index) => (
                     <button
                       key={index}
                       className={`w-2 h-2 rounded-full transition-all duration-300 ${
                         index === currentQuote 
-                          ? 'bg-primary w-8' 
+                          ? 'bg-primary w-6 md:w-8' 
                           : 'bg-muted-foreground/30 hover:bg-muted-foreground/50'
                       }`}
                       onClick={() => setCurrentQuote(index)}
